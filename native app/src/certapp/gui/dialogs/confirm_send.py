@@ -78,7 +78,7 @@ class ConfirmSendDialog(QDialog):
         lay_card.setSpacing(4)
 
         self.chk_confirm = QCheckBox("I agree to send these certificate emails")
-        self.chk_confirm.setCursor(Qt.PointingHandCursor)
+        self.chk_confirm.setCursor(Qt.CursorShape.PointingHandCursor)
         self.chk_confirm.setStyleSheet("""
             QCheckBox {
                 font-size: 13px;
@@ -92,7 +92,7 @@ class ConfirmSendDialog(QDialog):
         lbl_sub = QLabel("I verify the recipient list and confirm that all email and SMTP settings are correct.")
         lbl_sub.setStyleSheet("color: #8C92B2; font-size: 11px; margin-left: 28px;")
         lbl_sub.setWordWrap(True)
-        lbl_sub.setCursor(Qt.PointingHandCursor)
+        lbl_sub.setCursor(Qt.CursorShape.PointingHandCursor)
         lbl_sub.mousePressEvent = lambda e: self.chk_confirm.toggle()
 
         lay_card.addWidget(self.chk_confirm)

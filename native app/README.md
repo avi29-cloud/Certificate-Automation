@@ -52,26 +52,68 @@ certapp/
 ### Prerequisites
 
 - Python 3.11+
+- pip
 
-### Installation
+---
+
+### Quick Start by Platform
+
+#### 🐧 Linux & 🍎 macOS (Bash / Zsh / Fish)
 
 ```bash
-# Create and activate virtual environment
+# 1. Create virtual environment
 python3 -m venv .venv
-source .venv/bin/activate  # Or source .venv/bin/activate.fish for Fish shell
 
-# Install dependencies and editable package
-pip install -e .
-```
+# 2. Activate virtual environment
+source .venv/bin/activate       # Bash / Zsh
+# OR:
+source .venv/bin/activate.fish  # Fish shell
 
-### Running the Application
+# 3. Install dependencies and dev tools
+pip install -r requirements.txt
+pip install -e ".[dev]"
 
-```bash
+# 4. Run the application
 python3 main.py
+# (Or simply run: ./run.sh)
+
+# 5. Run the test suite
+pytest
 ```
+
+> **Note for Fish shell users**: Always run `source .venv/bin/activate.fish`. If the project directory is ever moved or renamed, recreate `.venv` (`rm -rf .venv && python3 -m venv .venv`) to fix hardcoded paths.
+
+---
+
+#### 🪟 Windows (Git Bash / PowerShell / Command Prompt)
+
+👉 **For complete Windows guidance, see [README_WINDOWS.md](README_WINDOWS.md).**
+
+Quick launcher:
+- Simply double-click **`run.bat`** (or run `.\run.ps1` in PowerShell).
+
+Manual command (Git Bash):
+```bash
+python -m venv .venv
+source .venv/Scripts/activate
+pip install -r requirements.txt
+pip install -e ".[dev]"
+
+# IMPORTANT on Windows: use 'python', NOT 'python3'!
+python main.py
+
+# Run tests:
+python -m pytest
+```
+
+---
 
 ### Running the Test Suite
 
+Run the full pytest suite with Qt fixtures:
+
 ```bash
-pytest
+# Cross-platform safe command:
+python -m pytest
 ```
+
