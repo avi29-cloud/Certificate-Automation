@@ -1,0 +1,6 @@
+Full Name,Email Address,Role,Issue Date
+Alice Smith,alice.smith@example.com,Keynote Speaker,2026-10-10
+Bob Jones,bob.jones@example.com,Workshop Lead,2026-10-10
+Charlie Brown,charlie.brown@example.com,Attendee,2026-10-10
+Diana Prince,diana.prince@example.com,Organizer,2026-10-10
+Evan Wright,invalid-email-format,Participant,2026-10-10

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certapp"
+version = "0.1.0"
+description = "Certificate Automation Desktop Application"
+authors = [{ name = "CertApp Team" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "PySide6>=6.5.0",
+    "Pillow>=10.0.0",
+    "PyMuPDF>=1.23.0",
+    "pandas>=2.0.0",
+    "openpyxl>=3.1.0",
+    "keyring>=24.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
